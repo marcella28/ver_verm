@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: OrientationLayout(),
     );
   }
 }
 
 class OrientationLayout extends StatelessWidget {
+  const OrientationLayout({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +28,7 @@ class OrientationLayout extends StatelessWidget {
             child: Center(
               child: Text(
                 orientation == Orientation.portrait ? "VERTICAL" : "HORIZONTAL",
-                style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold, color: Colors.white),
+                style: const TextStyle(fontSize: 50, fontWeight: FontWeight.bold, color: Colors.white),
               ),
             ),
           );
